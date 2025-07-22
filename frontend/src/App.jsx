@@ -3,7 +3,7 @@
 function App() {
   return (
     <div>
-      <h1>Ad Game Platform</h1>
+      <h1>AdGame Platform</h1>
       <p>Bienvenido a la plataforma de anuncios para videojuegos</p>
     </div>
   );
