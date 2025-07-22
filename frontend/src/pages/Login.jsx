@@ -1,4 +1,4 @@
- import React, { useState } from "react";
+  import React, { useState } from "react";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -31,29 +31,20 @@ function Login() {
   };
 
   return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>AdGame Platform</h1>
-      <p>Bienvenido a la plataforma de anuncios para videojuegos</p>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          style={{ display: "block", margin: "1rem 0", padding: "0.5rem" }}
-        />
-        <select
-          value={role}
-          onChange={(e) => setRole(e.target.value)}
-          style={{ display: "block", margin: "1rem 0", padding: "0.5rem" }}
-        >
-          <option value="advertiser">Anunciante</option>
-          <option value="developer">Desarrollador</option>
-        </select>
-        <button type="submit" style={{ padding: "0.5rem 1rem" }}>Registrar</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="email"
+        placeholder="Correo electrónico"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <select value={role} onChange={(e) => setRole(e.target.value)}>
+        <option value="advertiser">Anunciante</option>
+        <option value="developer">Desarrollador</option>
+      </select>
+      <button type="submit">Registrar</button>
+    </form>
   );
 }
 
